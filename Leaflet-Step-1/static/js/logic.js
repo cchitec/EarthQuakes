@@ -16,21 +16,21 @@ d3.json(queryUrl, function(data) {
         "</h3><hr><p>" + new Date(feature.properties.time) + "</p>");
     }
   
-    function setColor(magnitude){
+    function setColor(depth){
         switch(true){
-            case magnitude>=6:
+            case magnitude>60:
                 return'#800000'
-            case magnitude>=5:
+            case magnitude<=60:
                 return'#b30000'
-            case magnitude>=4:
+            case magnitude<50:
                 return'##ff3300'
-            case magnitude>=3:
+            case magnitude<40:
                 return '#ff9900'
-            case magnitude>=2:
+            case magnitude<30:
                 return'#ffcc00'
-            case magnitude>=1:
+            case magnitude<20:
                 return '#ffff00'
-            case magnitude<1:
+            case magnitude<10:
                 return '#ccff33'
     }
 }
