@@ -18,19 +18,19 @@ d3.json(queryUrl, function(data) {
   
     function setColor(depth){
         switch(true){
-            case magnitude>60:
+            case depth>60:
                 return'#800000'
-            case magnitude<=60:
+            case depth<=60:
                 return'#b30000'
-            case magnitude<50:
+            case depth<50:
                 return'##ff3300'
-            case magnitude<40:
+            case depth<40:
                 return '#ff9900'
-            case magnitude<30:
+            case depth<30:
                 return'#ffcc00'
-            case magnitude<20:
+            case depth<20:
                 return '#ffff00'
-            case magnitude<10:
+            case depth<10:
                 return '#ccff33'
     }
 }
