@@ -50,7 +50,7 @@ function markerSize(magnitude) {
                 adius: markerSize(earthquakeData.properties.mag),
                 color: "gray",
                 weight: 1,
-                fillColor: markerColor(earthquakeData.geometry.coordinates[2]),
+                fillColor: setColor(earthquakeData.geometry.coordinates[2]),
                 stroke: true,
     
             });
