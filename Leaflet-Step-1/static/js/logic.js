@@ -47,7 +47,7 @@ function markerSize(magnitude) {
 
                 opacity: 1,
                 fillOpacity: 1,
-                adius: markerSize(earthquakeData.properties.mag),
+                radius: markerSize(earthquakeData.properties.mag),
                 color: "gray",
                 weight: 1,
                 fillColor: setColor(earthquakeData.geometry.coordinates[2]),
