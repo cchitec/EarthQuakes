@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 var queryUrl = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
 
 // Grabbing our GeoJSON data..
-=======
-url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
->>>>>>> 1c443eab5917eb0cbf94b48de059810645f7bc5d
 
 d3.json(queryUrl, function(data) {  
   createFeatures(data.features);
   });
-<<<<<<< HEAD
-    // Creating a geoJSON layer with the retrieved data
+
+   // Creating a geoJSON layer with the retrieved data
     L.geoJson(data, {
       // Style each feature (in this case a neighborhood)
       style: function(feature) {
@@ -50,8 +46,6 @@ d3.json(queryUrl, function(data) {
   
       }
     }).addTo(myMap);
-=======
->>>>>>> 1c443eab5917eb0cbf94b48de059810645f7bc5d
 
 // Add a tile layers
 var streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -70,7 +64,6 @@ var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z
     accessToken: API_KEY
 });
 
-<<<<<<< HEAD
 var satelliteMap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution:  "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     tileSize: 512,
@@ -89,14 +82,7 @@ var baseMaps = {
 };
 
  //  overlayMaps object 
-=======
-var baseMaps = {
-    "Street Map": streetmap,
-    "Dark Map": darkmap,
-};
- // Create overlay object to hold our overlay layer
->>>>>>> 1c443eab5917eb0cbf94b48de059810645f7bc5d
-var overlayMaps = {
+ var overlayMaps = {
     Earthquakes: earthquakes
 };
 
@@ -125,19 +111,11 @@ function setColor(magnitude){
         case magnitude<1:
             return '#ccff33'
     }
-<<<<<<< HEAD
 }
-  
+
 function markerSize(magnitude) {
     return magnitude * 4
 }
-=======
-};
-  
-function markerSize(magnitude) {
-    return magnitude * 4
-};
->>>>>>> 1c443eab5917eb0cbf94b48de059810645f7bc5d
 
 var legend = L.control({ position: 'bottomright' });
 
@@ -154,7 +132,3 @@ var legend = L.control({ position: 'bottomright' });
         return div;
     };
     legend.addTo(myMap);
-<<<<<<< HEAD
-=======
-
->>>>>>> 1c443eab5917eb0cbf94b48de059810645f7bc5d
