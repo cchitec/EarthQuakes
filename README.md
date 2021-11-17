@@ -1,1 +1,2 @@
-# leaflet_challenge
+# EarthQuakes
+
